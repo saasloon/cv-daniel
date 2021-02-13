@@ -1,1 +1,32 @@
+:root {
+  --primary: #1abc9c;
+  --primary-b: #148f77;
+  --secondary: #2c3e50;
+}
+
 /* You can add global styles to this file, and also import other style files */
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+a.bg-primary.bg-primary:focus,
+a.bg-primary.bg-primary:hover,
+button.bg-primary.bg-primary:focus,
+button.bg-primary.bg-primary:hover {
+  background-color: var(--primary-b) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary) !important
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-secondary {
+  color: var(--secondary) !important;
+}
