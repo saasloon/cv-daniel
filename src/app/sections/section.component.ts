@@ -1,4 +1,4 @@
 export interface SectionComponent {
   id: string;
-  name: string;
+  name?: string;
 }

@@ -1,0 +1,52 @@
+<h2 class="page-section-heading text-center text-uppercase mb-0">Contact Me</h2>
+<cvd-divider color="var(--secondary)"></cvd-divider>
+
+<div class="container">
+    <!-- Contact Section Form-->
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
+            <form id="contactForm" [formGroup]="this.contactForm" name="sentMessage" novalidate="novalidate">
+                <div #nameGroup class="floating-label-form-group controls mb-0 pb-2">
+                  <label>Name</label>
+                  <input formControlName="name" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." aria-invalid="false"
+                    (focus)="onFocus(nameGroup, true)"
+                    (blur)="onFocus(nameGroup, false)"
+                    (ngModelChange)="onValueChange($event, nameGroup)"
+                  >
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div #emailGroup class="floating-label-form-group controls mb-0 pb-2">
+                  <label>Email Address</label>
+                  <input formControlName="email" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address."
+                    (focus)="onFocus(emailGroup, true)"
+                    (blur)="onFocus(emailGroup, false)"
+                    (ngModelChange)="onValueChange($event, emailGroup)"
+                  >
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div #phoneGroup class="floating-label-form-group controls mb-0 pb-2">
+                  <label>Phone Number</label>
+                  <input formControlName="phone" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number."
+                    (focus)="onFocus(phoneGroup, true)"
+                    (blur)="onFocus(phoneGroup, false)"
+                    (ngModelChange)="onValueChange($event, phoneGroup)"
+                  >
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div #messageGroup class="floating-label-form-group controls mb-0 pb-2">
+                  <label>Message</label>
+                  <textarea formControlName="message" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."
+                    (focus)="onFocus(messageGroup, true)"
+                    (blur)="onFocus(messageGroup, false)"
+                    (ngModelChange)="onValueChange($event, messageGroup)"
+                  ></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+                <br>
+                <div id="success"></div>
+                <button [disabled]="!this.contactForm.valid" class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>

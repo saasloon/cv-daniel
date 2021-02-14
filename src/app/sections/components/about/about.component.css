@@ -1,0 +1,7 @@
+:host {
+  padding: 6rem 0;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  color: white;
+}

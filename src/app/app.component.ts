@@ -1,7 +1,7 @@
 import { Component, ComponentFactory, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { SectionComponent } from './sections/section.component';
-import { SectionDirective } from './sections/section.directive';
-import { SectionService } from './sections/section.service';
+import { SectionDirective } from './sections/directives/section.directive';
+import { SectionService } from './sections/services/section.service';
 
 @Component({
   selector: 'app-root',
@@ -43,7 +43,8 @@ export class AppComponent {
         if (i == 0) {
           this.first_item_id = componentRef.instance.id;
           this.currentSection = this.first_item_id;
-        } else {
+        }
+        if (componentRef.instance.name) {
           this.navItems.push({id: componentRef.instance.id, name: componentRef.instance.name});
         }
       }

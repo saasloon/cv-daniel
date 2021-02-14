@@ -1,0 +1,52 @@
+<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Curriculum Vitae</h2>
+<cvd-divider color="var(--secondary)"></cvd-divider>
+<div class="container d-flex flex-row flex-wrap justify-content-around">
+  <cvd-button-img
+    class="card col-md-4 col-lg-3 mb-5"
+    src="assets/img/work.png"
+    style="background-color: lightblue;"
+    data-toggle="modal" data-target="#work-modal"
+  ></cvd-button-img>
+  <cvd-button-img
+    class="card col-md-4 col-lg-3 mb-5"
+    src="assets/img/education.png"
+    style="background-color: lightsalmon;"
+    data-toggle="modal" data-target="#education-modal"
+  ></cvd-button-img>
+  <cvd-button-img
+    class="card col-md-4 col-lg-3 mb-5"
+    src="assets/img/skills.png"
+    [makeRound]="true"
+    style="background-color: darkseagreen;"
+    data-toggle="modal" data-target="#skills-modal"
+  ></cvd-button-img>
+  <cvd-button-img
+    class="card col-md-4 col-lg-3 mb-5"
+    src="assets/img/certificate.png"
+    style="background-color: darkgray;"
+    data-toggle="modal" data-target="#certificates-modal"
+  ></cvd-button-img>
+  <cvd-button-img
+    class="card col-md-4 col-lg-3 mb-5"
+    src="assets/img/travel.png"
+    style="background-color: darkslateblue;"
+    data-toggle="modal" data-target="#hobbies-modal"
+  ></cvd-button-img>
+</div>
+<cvd-modal [id]="'work-modal'" img_src="assets/img/work.png" title="Professional Experience">
+  <cvd-work></cvd-work>
+</cvd-modal>
+<cvd-modal [id]="'education-modal'" img_src="assets/img/education.png" title="Education">
+  <cvd-education></cvd-education>
+</cvd-modal>
+<cvd-modal [id]="'skills-modal'" img_src="assets/img/skills.png" title="Skills">
+  <cvd-skills></cvd-skills>
+</cvd-modal>
+<cvd-modal [id]="'certificates-modal'" img_src="assets/img/certificate.png" title="Certificates">
+  <cvd-certifications></cvd-certifications>
+</cvd-modal>
+<cvd-modal [id]="'hobbies-modal'" img_src="assets/img/travel.png" title="Hobbies">
+  <cvd-hobbies></cvd-hobbies>
+</cvd-modal>
+
+
