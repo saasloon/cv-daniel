@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cv-daniel-98fd5": {
+      "hosting": {
+        "cv-daniel": [
+          "cv-daniel-98fd5"
+        ]
+      }
+    }
+  }
+}

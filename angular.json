@@ -124,6 +124,10 @@
               "devServerTarget": "cv-daniel:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
